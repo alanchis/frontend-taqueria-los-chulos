@@ -1,9 +1,9 @@
 
 
-// import axios from 'axios'
+import axios from 'axios'
 
-// const axiosClient = axios.create({
-// 	baseURL: process.env.REACT_APP_BACKEND_URL
-// })
+const axiosClient = axios.create({
+	baseURL: process.env.REACT_APP_BACKEND_URL
+})
 
-// export default axiosClient
+export default axiosClient
