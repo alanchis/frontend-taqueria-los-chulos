@@ -30,7 +30,7 @@ export default function Header() {
                 className="navbar-brand" 
                 to="/"
             >
-            <img src="assets/logo100.png" alt="logo de los chulos" width="100px"/>
+            <img src="assets/logo100.png" alt="logo de los chulos" width="180px"/>
             </Link>
 
             <div className="navbar-collapse">
@@ -40,14 +40,14 @@ export default function Header() {
                         className={ ({ isActive}) => "nav-item nav-link" + (isActive ? " active" : '') }
                         to="/menu"
                     >
-                        Menú
+                        <h1>Menú</h1>
                     </NavLink>
 
                     <NavLink 
                         className={ ({ isActive}) => "nav-item nav-link" + (isActive ? " active" : '') }
-                        to="/recomendaciones"
+                        to="/comentarios"
                     >
-                        Recomendaciones
+                        <h1>Comentarios</h1>
                     </NavLink>
                 </div>
             </div>
@@ -55,7 +55,7 @@ export default function Header() {
             <div className="navbar-collapse collapse w-100 order-3 dual-collapse2 d-flex justify-content-end">
                 <ul className="navbar-nav ml-auto">
 
-                    <span className="nav-item nav-link text-info">{currentUser.name} {currentUser.lastname} </span>
+                    {/* <span className="nav-item nav-link text-info">{currentUser.name} {currentUser.lastname} </span> */}
 
 
 
@@ -63,13 +63,18 @@ export default function Header() {
 						authStatus ?
 						(
 							<>
+
+              `<span className="nav-item nav-link text-info"><h2>{currentUser.name} {currentUser.lastname}</h2> </span>
+
+              
+
 								
 									<NavLink
                     className={ ({ isActive}) => "nav-item nav-link" + (isActive ? " active" : '') }
 										to="/"
 										onClick={() => {logoutUser()}}
 									>
-										Cerrar sesión		
+										<h2>Cerrar sesión</h2>		
 									</NavLink>
 								
 								
@@ -82,7 +87,7 @@ export default function Header() {
                         className={ ({ isActive}) => "nav-item nav-link" + (isActive ? " active" : '') }
                         to="/registro"
                     >
-                        Crear Cuenta
+                        <h2>Crear Cuenta</h2>
                   </NavLink>
 								
 								
@@ -90,7 +95,7 @@ export default function Header() {
                         className={ ({ isActive}) => "nav-item nav-link" + (isActive ? " active" : '') }
                         to="/login"
                     >
-                        Iniciar Sesión
+                        <h2>Iniciar Sesión</h2>
                   </NavLink>
 								
 							</>

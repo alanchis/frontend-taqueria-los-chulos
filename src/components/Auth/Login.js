@@ -1,6 +1,7 @@
 
 import {useState, useContext} from 'react'
 
+
 import UsersContext from './../../context/Users/UsersContext'
 
 
@@ -39,20 +40,57 @@ export default function Login() {
   return (
 	  <>
 
+<form onSubmit={(evt) => { handleSubmit(evt) }}>
+  <div className="form-group">
+    <label for="exampleInputEmail1">Email </label>
+    <input 
+        name="email"
+        value={data.email}
+        onChange={(evt) => { handleChange(evt) }}
+        type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email"/>
+    
+  </div>
+
+  <div className="form-group">
+    <label for="exampleInputPassword1">Password</label>
+    <input
+        name="password"
+        value={data.password}
+        onChange={(evt) => { handleChange(evt) }}
+       type="password" className="form-control" id="exampleInputPassword1" placeholder="Password"/>
+  </div>
+
+  <button type="submit" className="btn btn-primary">Iniciar sesión</button>
+</form>
+
+      
 
 
 
 
 
-      <form onSubmit={(evt) => { handleSubmit(evt) }}>
-        <label>Email</label>
+
+
+
+
+
+
+
+
+
+
+
+      {/* <form onSubmit={(evt) => { handleSubmit(evt) }}>
+        <label><h2>Email</h2></label>
         <input 
           name="email"
           value={data.email}
           onChange={(evt) => { handleChange(evt) }}
         />
 
-        <label>Password</label>
+        <br />
+
+        <label><h2>Password</h2></label>
         <input 
         name="password"
         value={data.password}
@@ -60,9 +98,13 @@ export default function Login() {
         type="password"
         />
 
-        <button type="submit">Iniciar sesión</button>
+        <br />
 
-      </form>
+        <button type="submit" ><h1>Iniciar sesión</h1></button>
+
+      </form> */}
+
+
     </>
   )
 }

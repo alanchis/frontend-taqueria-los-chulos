@@ -39,47 +39,53 @@ export default function Register() {
 
   return (
     <>
-
-
       <form onSubmit={(evt) => { handleSubmit(evt) }}>
-        <label>Nombre</label>
-        <input 
-          name="name"
-          value={data.name}
-          onChange={(evt) => { handleChange(evt) }}
-        />
+          <div className="form-group">
+            <label for="exampleInputEmail1">Nombre </label>
+            <input 
+                name="name"
+                value={data.name}
+                onChange={(evt) => { handleChange(evt) }}
+                type="text" className="form-control" id="exampleInputEmail1"  placeholder="Nombre"/>
+            
+          </div>
+          <div className="form-group">
+            <label for="exampleInputEmail1">Apellido </label>
+            <input 
+                name="lastname"
+                value={data.lastname}
+                onChange={(evt) => { handleChange(evt) }}
+                type="text" className="form-control" id="exampleInputEmail1"  placeholder="Apellido"/>
+            
+          </div>
+          <div className="form-group">
+            <label for="exampleInputEmail1">Email </label>
+            <input 
+                name="email"
+                value={data.email}
+                onChange={(evt) => { handleChange(evt) }}
+                type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Ingresa email"/>
+            
+          </div>
 
-        <br />
+          <div className="form-group">
+            <label for="exampleInputPassword1">Password</label>
+            <input
+                name="password"
+                value={data.password}
+                onChange={(evt) => { handleChange(evt) }}
+              type="password" className="form-control" id="exampleInputPassword1" placeholder="Password"/>
+          </div>
 
-        <label>Apellido</label>
-        <input 
-          name="lastname"
-          value={data.lastname}
-          onChange={(evt) => { handleChange(evt) }}
-        />
+  <button type="submit" className="btn btn-primary">Crear Usuario</button>
+</form>
 
-        <br />
 
-        <label>Email</label>
-        <input 
-          name="email"
-          value={data.email}
-          onChange={(evt) => { handleChange(evt) }}
-        />
 
-        <br />
 
-        <label>Contraseña</label>
-        <input 
-          name="password"
-          value={data.password}
-          onChange={(evt) => { handleChange(evt) }}
-          type="password"
-        />
 
-        <button type="submit">Crear usuario</button>
 
-      </form>
+
 
 
     </>
