@@ -1,5 +1,6 @@
 import React from 'react'
 import { useState, useContext } from 'react'
+import { nanoid } from "nanoid"
 import CommentsContext from '../../context/Comentarios/CommentsContext'
 
 
@@ -14,11 +15,6 @@ export default function Comentarios() {
 		createComment
 	} = ctxComments
 
-	
-
-
-
-
 
 
 	const [newComment, setNewComment] = useState({
@@ -26,10 +22,13 @@ export default function Comentarios() {
 		description: ""
 	})
 
+	const [list, setList] = useState([])
+
 	const handleChange = (event) => {
 
 		setNewComment({
 			...newComment,
+			id: nanoid(),
 			[event.target.name]: event.target.value
 		})
 
@@ -41,15 +40,19 @@ export default function Comentarios() {
 
 		createComment(newComment)
 
+		setNewComment({
+			name: "",
+			description: "",
+			
+		})
+
 	}
 
 
-
-
   return (
-    <>
+	<>
 
-<h1>Crear comentario</h1>
+		<h1>Crear mascota</h1>
 		<form onSubmit={(evt) => { handleSubmit(evt) }}>
 			<label>Nombre</label>
 			<input 
@@ -65,22 +68,20 @@ export default function Comentarios() {
 				onChange={(evt) => { handleChange(evt) }}
 			/>
 
-            <br/>
-
 			<button type="submit">Crear comentario</button>
 
 		</form>
 
-		<h1>Listado de comentarios</h1>
+		<h1>Listado de mascotas</h1>
 
 		<button onClick={() => { getComments() }}>
-			Obtener comments
+			Obtener perros
 		</button>
 		<div>
 		{
 			comments.map((elt) => {
 				return (
-					<div key={elt._id}>
+					<div key={elt.description}>
 						<h1>{elt.name}</h1>
 						<p>{elt.description}</p>
 					</div>
@@ -90,17 +91,9 @@ export default function Comentarios() {
 		</div>
 
 
+		<hr />
 
-
-
-
-
-
-
-    
-
-
-
-    </>
+	
+	</>
   )
 }

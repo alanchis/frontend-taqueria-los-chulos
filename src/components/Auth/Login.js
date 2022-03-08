@@ -80,31 +80,7 @@ export default function Login() {
 
 
 
-      {/* <form onSubmit={(evt) => { handleSubmit(evt) }}>
-        <label><h2>Email</h2></label>
-        <input 
-          name="email"
-          value={data.email}
-          onChange={(evt) => { handleChange(evt) }}
-        />
-
-        <br />
-
-        <label><h2>Password</h2></label>
-        <input 
-        name="password"
-        value={data.password}
-        onChange={(evt) => { handleChange(evt) }}
-        type="password"
-        />
-
-        <br />
-
-        <button type="submit" ><h1>Iniciar sesión</h1></button>
-
-      </form> */}
-
-
+    
     </>
   )
 }

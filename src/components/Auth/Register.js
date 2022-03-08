@@ -35,10 +35,18 @@ export default function Register() {
 
     registerUser(data)
 
+    window.alert("Usuario creado con éxito");
+
+
   }
 
   return (
     <>
+      <h3>Accede a mayores beneficios y promociones, creando una cuenta. </h3>
+      
+
+
+
       <form onSubmit={(evt) => { handleSubmit(evt) }}>
           <div className="form-group">
             <label for="exampleInputEmail1">Nombre </label>
