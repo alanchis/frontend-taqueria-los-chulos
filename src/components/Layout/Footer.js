@@ -5,15 +5,7 @@ import  "./Footer.css"
 export const Footer = () => {
   return (
     <>
-
-    <hr/>
-
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
+{/* 
     <br/>
 
 <footer id="footer" class="footer-1">
@@ -26,7 +18,7 @@ export const Footer = () => {
 <h5 class="widget-title">TAQUERIA LOS CHULOS<span></span></h5>
 <p>Av. Revolucion 886 Insurgentes Mixcoac, Benito Juarez, 03920, Ciudad de Mexico</p>
 </div>
-</div>
+</div> */}
 
 {/* <div class="col-xs-12 col-sm-6 col-md-3">
 <div class="widget no-box">
@@ -65,7 +57,7 @@ export const Footer = () => {
 </div>
 </div> */}
 
-<div class="col-xs-12 col-sm-6 col-md-3">
+{/* <div class="col-xs-12 col-sm-6 col-md-3">
 
 <div class="widget no-box">
 <h5 class="widget-title">CONTACTO<span></span></h5>
@@ -96,7 +88,7 @@ export const Footer = () => {
 </div>
 </div>
 </div>
-</footer>
+</footer> */}
 
       
 

@@ -17,24 +17,21 @@ const CommentsState = (props) => {
 	const [globalState, dispatch] = useReducer(CommentsReducer, initialState)
 
 	const getComments = async () => {
-
 		const res = await axiosClient.get("/api/comentarios")
-
-		const arrCats = res.data.data
+		const arrComments = res.data.data
+		console.log(arrComments)
 
 		dispatch({
-			type: "GET_Comments",
-			payload: arrCats
+			type: "GET_COMMENTS",
+			payload: arrComments
 		})
+
 
 	}
 
 	const createComment = async (dataForm) => {
-
 		await axiosClient.post("/api/comentarios/create", dataForm)
-
 		getComments()
-
 	}
 
 
