@@ -35,7 +35,7 @@ export default function Register() {
 
     registerUser(data)
 
-    window.alert("Usuario creado con éxito");
+    
 
 
   }
