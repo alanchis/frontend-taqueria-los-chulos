@@ -86,7 +86,7 @@ function Router() {
                 <Route 
                     path="carrito"
                     element={
-                      <Auth component={Carrito} />
+                      <Public component={Carrito} />
                     } 
                   />  
 

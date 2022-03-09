@@ -1,6 +1,7 @@
 
 
 import { useReducer } from 'react'
+import { Navigate } from 'react-router-dom'
 
 import UsersReducer from './UsersReducer'
 import UsersContext from './UsersContext'
@@ -71,7 +72,7 @@ const UsersState = (props) => {
 			payload: token
 		})
 
-
+	
 	}
 
 	const logoutUser = async () => {
@@ -79,6 +80,8 @@ const UsersState = (props) => {
 		dispatch({
 			type: "CERRAR_SESION"
 		})
+
+		window.alert("Se ha cerrado sesión con éxito");
 
 	}
 

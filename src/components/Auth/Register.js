@@ -44,49 +44,55 @@ export default function Register() {
     <>
       <h3>Accede a mayores beneficios y promociones, creando una cuenta. </h3>
       
+<br/>
+<br/>
+<br/>
+<br/>
+
+<div className="container">
+<form onSubmit={(evt) => { handleSubmit(evt) }}>
+<div class="form-floating mb-3">
+  <input 
+    name="name"
+    value={data.name}
+    onChange={(evt) => { handleChange(evt) }}
+    type="text" class="form-control" id="floatingInput" />
+  <label for="floatingInput">Nombre</label>
+</div>
+
+<div class="form-floating mb-3">
+  <input
+    name="lastname"
+    value={data.lastname}
+    onChange={(evt) => { handleChange(evt) }}
+    type="text" class="form-control" id="floatingInput" />
+  <label for="floatingInput">Apellido</label>
+</div>
+
+<div class="form-floating mb-3">
+  <input
+    name="email"
+    value={data.email}
+    onChange={(evt) => { handleChange(evt) }}
+    type="email" class="form-control" id="floatingInput" />
+  <label for="floatingInput">Email</label>
+</div>
+
+<div class="form-floating mb-3">
+  <input
+    name="password"
+    value={data.password}
+    onChange={(evt) => { handleChange(evt) }}
+    type="password" class="form-control" id="floatingInput"/>
+  <label for="floatingInput">Password</label>
+</div>
 
 
-
-      <form onSubmit={(evt) => { handleSubmit(evt) }}>
-          <div className="form-group">
-            <label for="exampleInputEmail1">Nombre </label>
-            <input 
-                name="name"
-                value={data.name}
-                onChange={(evt) => { handleChange(evt) }}
-                type="text" className="form-control" id="exampleInputEmail1"  placeholder="Nombre"/>
-            
-          </div>
-          <div className="form-group">
-            <label for="exampleInputEmail1">Apellido </label>
-            <input 
-                name="lastname"
-                value={data.lastname}
-                onChange={(evt) => { handleChange(evt) }}
-                type="text" className="form-control" id="exampleInputEmail1"  placeholder="Apellido"/>
-            
-          </div>
-          <div className="form-group">
-            <label for="exampleInputEmail1">Email </label>
-            <input 
-                name="email"
-                value={data.email}
-                onChange={(evt) => { handleChange(evt) }}
-                type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Ingresa email"/>
-            
-          </div>
-
-          <div className="form-group">
-            <label for="exampleInputPassword1">Password</label>
-            <input
-                name="password"
-                value={data.password}
-                onChange={(evt) => { handleChange(evt) }}
-              type="password" className="form-control" id="exampleInputPassword1" placeholder="Password"/>
-          </div>
-
-  <button type="submit" className="btn btn-primary">Crear Usuario</button>
+<button type="submit" className="btn btn-primary">Iniciar sesión</button>
 </form>
+</div>
+
+      
 
 
 

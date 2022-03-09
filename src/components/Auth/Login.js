@@ -39,29 +39,38 @@ export default function Login() {
 
   return (
 	  <>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
 
+
+
+
+<div className="container">
 <form onSubmit={(evt) => { handleSubmit(evt) }}>
-  <div className="form-group">
-    <label for="exampleInputEmail1">Email </label>
-    <input 
-        name="email"
-        value={data.email}
-        onChange={(evt) => { handleChange(evt) }}
-        type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email"/>
-    
-  </div>
+<div class="form-floating mb-3">
+  <input 
+    name="email"
+    value={data.email}
+    onChange={(evt) => { handleChange(evt) }}
+    type="email" class="form-control" id="floatingInput" placeholder="name@example.com"/>
+  <label for="floatingInput">Email </label>
+</div>
+<div class="form-floating">
+  <input
+    name="password"
+    value={data.password}
+    onChange={(evt) => { handleChange(evt) }}
+    type="password" class="form-control" id="floatingPassword" placeholder="Password"/>
+  <label for="floatingPassword">Password</label>
+</div>
+ <br/>
 
-  <div className="form-group">
-    <label for="exampleInputPassword1">Password</label>
-    <input
-        name="password"
-        value={data.password}
-        onChange={(evt) => { handleChange(evt) }}
-       type="password" className="form-control" id="exampleInputPassword1" placeholder="Password"/>
-  </div>
-
-  <button type="submit" className="btn btn-primary">Iniciar sesión</button>
+<button type="submit" className="btn btn-primary">Iniciar sesión</button>
 </form>
+</div>
 
       
 

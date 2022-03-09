@@ -52,7 +52,7 @@ export default function Comentarios() {
   return (
 	<>
 
-		<h1>Crear mascota</h1>
+		<h1>Crear comentario</h1>
 		<form onSubmit={(evt) => { handleSubmit(evt) }}>
 			<label>Nombre</label>
 			<input 
@@ -72,10 +72,10 @@ export default function Comentarios() {
 
 		</form>
 
-		<h1>Listado de mascotas</h1>
+		<h1>Listado de comentarios</h1>
 
 		<button onClick={() => { getComments() }}>
-			Obtener perros
+			Obtener comentarios
 		</button>
 		<div>
 		{
