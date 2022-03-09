@@ -18,6 +18,7 @@ import Comentarios from './components/Comentarios/Comentarios';
 import Ubicacion from './components/Ubicacion/Ubicacion';
 import Carrito from './components/Carrito/Carrito';
 import ErrorPage from './components/ErrorPage/ErrorPage';
+import AuthCarrito from './routes/AuthCarrito';
 
 
 
@@ -48,14 +49,14 @@ function Router() {
                 <Route 
                     path="registro"
                     element={
-                      <Public component={Register} />
+                      <Auth component={Register} />
                     } 
                   />
 
                 <Route 
                     path="login"
                     element={
-                      <Public component={Login} />
+                      <Auth component={Login} />
                     } 
                   /> 
 
@@ -86,7 +87,7 @@ function Router() {
                 <Route 
                     path="carrito"
                     element={
-                      <Public component={Carrito} />
+                      <AuthCarrito component={Carrito} />
                     } 
                   />  
 
