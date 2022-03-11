@@ -35,17 +35,44 @@ const CommentsState = (props) => {
 	}
 
 
+    const deleteComment = async (id) => {
+
+        const res = await axiosClient.post(`/api/comentarios/delete/${id}`)
+
+        getComments()
+    }
+
+    const editComments = async (comment) => {
+
+        const res = await axiosClient.post(`/api/comentarios/comment/edit/${comment._id}`, comment)
+        dispatch({
+            type: "EDIT_COMMENT",
+            payload: comment
+        })
+
+    }
+
+
+
+
+
+	
 	return (
 		<CommentsContext.Provider
 			value={{
 				comments: globalState.comments,
 				getComments,
-				createComment
+				createComment,
+				deleteComment,
+				editComments
+				
 			}}
 		>
 			{props.children}
 		</CommentsContext.Provider>
 	)
+
+
 
 
 }

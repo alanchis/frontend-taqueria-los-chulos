@@ -5,6 +5,8 @@ import Card from "react-bootstrap/Card";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 
+import Swal from 'sweetalert2'
+
 import CommentsContext from '../../context/Comentarios/CommentsContext'
 
 
@@ -16,8 +18,16 @@ export default function Comentarios() {
 	const {
 		comments,
 		getComments,
-		createComment
+		createComment,
+		editComments,
+		deleteComment
+
 	} = ctxComments
+
+	const foundComment = comments.find((oneComment) => {
+
+      
+    })
 
 
 
@@ -46,6 +56,12 @@ export default function Comentarios() {
 			name: "",
 			description: "",
 		})
+
+	 
+		Swal.fire('Comentario realizado con éxito')
+
+
+
 	}
 
 	useEffect(() => {(getComments())},[])
@@ -140,7 +156,8 @@ export default function Comentarios() {
 						<h3>{elt.name}</h3>
 						<p>"{elt.description}"</p>
 						<button type="button" className="btn btn-primary">Editar</button>
-						<button type="submit" className="btn btn-danger">Borrar</button>
+						<button		
+							type="submit" className="btn btn-danger">Borrar</button>
 						
 
 					</div>

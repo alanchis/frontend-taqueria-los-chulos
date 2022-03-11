@@ -7,6 +7,14 @@ const reducer = (globalState, action) => {
 				comments: action.payload
 			}
 
+			case "EDIT_COMMENT":
+                return{
+                    ...globalState,
+                    comment: action.payload
+                }
+
+
+
 		default:
 			return globalState
 	}

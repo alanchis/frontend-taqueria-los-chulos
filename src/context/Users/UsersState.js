@@ -2,6 +2,8 @@
 
 import { useReducer } from 'react'
 import { Navigate } from 'react-router-dom'
+import Swal from 'sweetalert2'
+
 
 import UsersReducer from './UsersReducer'
 import UsersContext from './UsersContext'
@@ -72,6 +74,10 @@ const UsersState = (props) => {
 			payload: token
 		})
 
+		
+
+
+
 	
 	}
 
@@ -81,7 +87,16 @@ const UsersState = (props) => {
 			type: "CERRAR_SESION"
 		})
 
-		window.alert("Se ha cerrado sesión con éxito");
+		 
+		Swal.fire({
+			position: 'top-end',
+			icon: 'success',
+			title: 'Se ha cerrado sesión con éxito',
+			showConfirmButton: false,
+			timer: 1500
+		  })
+
+		//window.alert("Se ha cerrado sesión con éxito");
 
 	}
 
