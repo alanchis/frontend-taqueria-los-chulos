@@ -91,12 +91,12 @@ const UsersState = (props) => {
 		Swal.fire({
 			position: 'top-end',
 			icon: 'success',
-			title: 'Se ha cerrado sesión con éxito',
+			title: 'Se ha cerrado sesión con éxito ',
 			showConfirmButton: false,
 			timer: 1500
 		  })
 
-		//window.alert("Se ha cerrado sesión con éxito");
+		
 
 	}
 

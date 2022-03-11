@@ -147,7 +147,7 @@ export default function Comentarios() {
 		<Container>
       <Row xs={1} className="g-4">
         {comments.map((elt) => (
-          <Col xs={8}>
+          <Col xs={6}>
             <Card>
               <Card.Img variant="top" fluid="true"  />
               <Card.Body>
